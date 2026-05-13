@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accueil</title>
+</head>>
+
+<body>
+    <header>
+        <div class="connexion">
+            <a href="creer-compte.html">
+                <p class="creer-compte">connection</p>
+            </a>
+        </div>
+        <img class="background-image" src="./img/logo3.png" alt="Logo">
+        <nav>
+            <a href="#">ACCUEIL</a>
+            <a href="boutique.html">BOUTIQUE</a>
+            <a href="paiement.html">AIDE?</a>
+        </nav>
+
+    </header>
+    <section class="acceuil">
+        <div class="presentation">
+            <P>EQUIPE TOI COMME UN CHAMPION</P>
+        </div>
+        <div class="joueurs">
+            <img src="./img/j1.jpeg" alt="joueur 1" class="active">
+            <img src="./img/j4.jpeg" alt="joueur 4">
+            <img src="./img/j5.jpeg" alt="joueur 5">
+        </div>
+        <h1>TENDENCE</h1>
+        <section class="article-tendence">
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/fm1.jpeg" alt="paris saint germain"></div>
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/fm4.jpeg" alt="real madrid"></div>
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/b3.jpeg" alt="barcelona"></div>
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/b5.jpeg" alt="real madrid"></div>
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/g5.jpeg" alt="g5"></div>
+            <div><a href="boutique.html"><p>voir dans la boutique</p></a> <img src="./img/g7.jpeg" alt="g7"></div>
+        </section>
+
+    </section>
+
+    <footer>
+        <p>- Accueil | Produits | <a href="apropos.html">A propos</a></p>
+        <p>- <a href="politique-de-confidentialite.html">Politique de confidentialite</a> | <a
+                href="termes-et-conditions.html">termes et conditions</a></p>
+        <P>- <a href="contacts.html">contactez-nous</a></P>
+        <p>- &copy; 2026 Tomioka Footballstore</p>
+    </footer>
+
+    <script>
+        let images = document.querySelectorAll(".joueurs img");
+        let index = 0;
+
+        setInterval(() => {
+
+            images[index].classList.remove("active");
+
+            index++;
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            images[index].classList.add("active");
+
+        }, 5000); // 5000 ms = 5 secondes
+
+    </script>
+
+</body>
+
+</html>

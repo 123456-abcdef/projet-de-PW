@@ -1,0 +1,93 @@
+body {
+    margin: 0px;
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'lexend';
+    src: url(/font/lexend.ttf);
+}
+
+p {
+    font-weight: bold;
+    font-family: 'lexend';
+}
+
+
+body p {
+    color: white;
+}
+
+.email {
+    width: 200px;
+    height: 30px;
+    background-color: black;
+}
+
+.email:focus {
+    border: 1px solid cornflowerblue;
+}
+
+.continuer {
+    width: 200px;
+    border-radius: 16px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: cornflowerblue;
+    font-size: large;
+    font-weight: bold;
+}
+
+.continuer:hover {
+    background-color: rgb(104, 110, 121);
+    color: cornflowerblue;
+}
+
+div img {
+    height: 20px;
+    margin-top: 15px;
+}
+
+.lier {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 30vw;
+}
+
+.lier div {
+    height: 30px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    border: 1px solid rgb(107, 103, 103);
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.lier div a {
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+}
+
+.lier div p {
+    color: white;
+}
+
+cite {
+    opacity: 0.7;
+}
+
+.alternative {
+    color: white;
+    text-decoration: none;
+}

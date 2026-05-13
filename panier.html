@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pan.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Footballstore</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="paiement.html">Paiement</a>
+            <a href="#">Panier</a>
+        </nav>
+
+    </header>
+    <section class="cart-section">
+        <h1><strong>Panier</strong></h1>
+        <hr>
+        <p>Les produits ayant fait l'objet de votre choix seront stockés ici. Vous pouvez revoir le panier avant de finaliser l'achat.</p>
+
+        <div id="cart-empty" class="cart-empty">
+            <p>Votre panier est vide.</p>
+            <p>Ajoutez des produits depuis la boutique pour finaliser votre achat.</p>
+            <a class="continue-btn" href="boutique.html">Voir la boutique</a>
+        </div>
+
+        <div id="cart-items" class="cart-items"></div>
+
+        <div class="cart-summary">
+            <div class="total-line">
+                <span>Total</span>
+                <strong id="cart-total">0</strong> FCFA
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Finaliser l'achat</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItemsEl = document.getElementById('cart-items');
+            const cartEmptyEl = document.getElementById('cart-empty');
+            const cartTotalEl = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+            function formatNumber(value) {
+                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            }
+
+            function saveCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            function removeItem(index) {
+                cart.splice(index, 1);
+                saveCart();
+                renderCart();
+            }
+
+            function renderCart() {
+                cartItemsEl.innerHTML = '';
+                if (!cart.length) {
+                    cartEmptyEl.style.display = 'block';
+                    cartItemsEl.style.display = 'none';
+                    checkoutBtn.disabled = true;
+                    cartTotalEl.textContent = '0';
+                    return;
+                }
+
+                cartEmptyEl.style.display = 'none';
+                cartItemsEl.style.display = 'block';
+                checkoutBtn.disabled = false;
+
+                let total = 0;
+
+                cart.forEach(function (item, index) {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    const line = document.createElement('div');
+                    line.className = 'cart-item';
+                    line.innerHTML = `
+                        <div class="item-details">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-meta">${item.quantity} × ${formatNumber(item.price)} FCFA</div>
+                        </div>
+                        <div class="item-actions">
+                            <div class="item-price">${formatNumber(itemTotal)} FCFA</div>
+                            <button type="button" class="remove-btn">Supprimer</button>
+                        </div>
+                    `;
+                    line.querySelector('.remove-btn').addEventListener('click', function () {
+                        removeItem(index);
+                    });
+                    cartItemsEl.appendChild(line);
+                });
+
+                cartTotalEl.textContent = formatNumber(total);
+            }
+
+            checkoutBtn.addEventListener('click', function () {
+                if (!cart.length) {
+                    return;
+                }
+                window.location.href = 'paiement.html';
+            });
+
+            renderCart();
+        });
+    </script>
+</body>
+</html>
