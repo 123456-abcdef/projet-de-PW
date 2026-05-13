@@ -1,0 +1,552 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(203, 207, 204);
+}
+
+header {
+    background-color: black;
+    background-image: url(../img/baniere2.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    color: aliceblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+@font-face {
+    font-family: 'googlesans';
+    src: url(../font/googlesans.ttf);
+}
+
+@font-face {
+    font-family: 'BBH';
+    src: url(../font/BBH.ttf);
+}
+
+
+header .connexion {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    position: relative;
+    bottom: 200px;
+    margin-right: 2px;
+}
+
+header .connexion a {
+    text-decoration: none;
+    color: white;
+}
+
+header .connexion .se-connecte {
+    background-color: #1146a3;
+    font-size: large;
+    border-radius: 16px;
+}
+
+header .connexion .se-connecte:hover {
+    background-color: #2456ad;
+}
+
+header .connexion .creer-compte {
+    background-color: rgb(76, 132, 217);
+    font-size: large;
+    border-radius: 16px;
+}
+
+header .connexion .creer-compte:hover {
+    background-color: rgb(58, 122, 219);
+}
+
+header .panier {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(64, 126, 220);
+    border-radius: 16px;
+    font-size: x-large;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+}
+
+header .panier .cart-count {
+    display: inline-flex;
+    min-width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #164d8a;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0 6px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'googlesans', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-family: 'googlesans', sans-serif;
+}
+
+.presentation-boutique {
+    background-image: url(../img/equipement.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32vh;
+}
+
+.presentation-boutique h1 {
+    color: white;
+    font-size: xx-large;
+    font-family: 'kaushan script';
+}
+
+.cathegories {
+    margin: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cathegories a {
+    color: coral;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: whitesmoke;
+}
+
+.cathegories a:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+span {
+    color: rgb(19, 210, 19);
+}
+
+.background-image {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+header nav a:hover {
+    background-color: rgb(19, 210, 19);
+}
+
+section {
+    padding: 5px;
+}
+
+.article .description p:first-child {
+    font-family: 'BBH';
+    font-size: 15px;
+}
+
+.maillot-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maillot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.maillot div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: cornflowerblue;
+    padding: 8px;
+
+}
+
+.maillot a img {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+}
+
+.maillot-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maillot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.ballon-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ballon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.ballon div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(99, 238, 147);
+    padding: 8px;
+
+}
+
+.ballon a img {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.full-maillot-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full-maillot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.full-maillot div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: cornflowerblue;
+    padding: 8px;
+
+}
+
+.full-maillot a img {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.survet-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.survet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.survet div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(89, 191, 216);
+    padding: 8px;
+
+}
+
+.survet a img {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.godasse-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.godasse {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.godasse div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(207, 163, 104);
+    padding: 8px;
+
+}
+
+.godasse a img {
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.boutique {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 8px;
+}
+
+
+.description {
+    font-weight: bold;
+    font-family: 'googlesans';
+}
+
+.article {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article img {
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.article:hover img {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.article .description {
+    background-color: wheat;
+    border-radius: 8px;
+    margin: 0px;
+    width: 250px;
+    padding: 10px 0;
+}
+
+.article .description a {
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+}
+
+.article .description a:hover {
+    background-color: white;
+    color: cornflowerblue;
+}
+
+section h1 {
+    color: #070806;
+}
+
+hr {
+    background-color: #0f110c;
+}
+
+.retour {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+    font-size: bold;
+    font-family: 'googlesans';
+    border-radius: 5px;
+}
+
+.retour:hover {
+    background-color: white;
+    color: cornflowerblue;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: black;
+    color: aliceblue;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer p a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Tablettes et petits écrans */
+@media (max-width: 768px) {
+
+    .maillot div,
+    .ballon div,
+    .full-maillot div,
+    .survet div,
+    .godasse div {
+        gap: 8px;
+        padding: 6px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+
+
+    .maillot a img,
+    .ballon a img,
+    .full-maillot a img,
+    .survet a img,
+    .godasse a img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+
+    .maillot div,
+    .ballon div,
+    .full-maillot div,
+    .survet div,
+    .godasse div {
+        width: 100%;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .article .description {
+        padding: 8px;
+    }
+
+    .article .description a {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+
+    section {
+        padding: 5px;
+    }
+
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.9em;
+    }
+
+    hr {
+        margin: 5px 0;
+    }
+}
+
+/* Très grands écrans */
+@media (min-width: 1200px) {
+
+    .maillot,
+    .ballon,
+    .full-maillot,
+    .survet,
+    .godasse {
+        gap: 20px;
+    }
+
+    .maillot a img,
+    .ballon a img,
+    .full-maillot a img,
+    .survet a img,
+    .godasse a img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .boutique {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    background-color: coral;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
